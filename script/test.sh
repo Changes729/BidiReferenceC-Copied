@@ -1,10 +1,7 @@
 #!/bin/bash
 
 SCRIPT_DIR=$(dirname $(readlink -f "$0"))
-TEST_DIR=$SCRIPT_DIR/../build/bin/test
+MAIN_DIR=$SCRIPT_DIR/..
+TEST_DIR=$SCRIPT_DIR/../build/bin
 
-if [ -d $TEST_DIR ]; then
-  for exe in $(ls $TEST_DIR); do
-    $TEST_DIR/$exe
-  done
-fi
+$TEST_DIR/bidiref -p $MAIN_DIR/resource/

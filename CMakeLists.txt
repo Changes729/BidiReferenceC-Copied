@@ -51,18 +51,4 @@ SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/linux_pc)
 ## support pkg_check_modules
 find_package(PkgConfig REQUIRED)
 
-add_subdirectory(3rdparty/googletest)
-
-# pkg_check_modules(LIBUSB REQUIRED libusb-1.0)
-# include_directories(${LIBUSB_INCLUDE_DIRS})
-# link_directories(${LIBUSB_LIBRARY_DIRS})
-# link_libraries(${LIBUSB_LIBRARIES})
-
 add_subdirectory(src)
-
-if(NOT "${SPIKE_EXAMPLES}" STREQUAL "OFF")
-message("build spike subdirectory")
-add_subdirectory(spike)
-endif()
-
-add_subdirectory(test)
