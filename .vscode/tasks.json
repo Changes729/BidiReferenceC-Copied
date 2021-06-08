@@ -1,0 +1,39 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "[build] default",
+      "type": "shell",
+      "command": "BUILD_TARGET=a.out ./script/build.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "env": {
+          "CMAKE_PROJECT_NAME": "${config:terminal.integrated.env.linux.CMAKE_OVERRIDE_PROJECT_NAME}",
+          "CMAKE_OPTIONS": "-DCMAKE_BUILD_TYPE=DEBUG -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "BUILD_DIR": "${config:terminal.integrated.env.linux.CMAKE_DEFAULT_BUILD_DIR}"
+        }
+      }
+    },
+    {
+      "label": "[build] deploy",
+      "type": "shell",
+      "command": "./script/build.sh deploy",
+      "options": {
+        "env": {
+          "CMAKE_PROJECT_NAME": "${config:terminal.integrated.env.linux.CMAKE_OVERRIDE_PROJECT_NAME}",
+          "BUILD_DIR": "${workspaceFolder}/dist"
+        }
+      }
+    },
+    {
+      "label": "[build] something only",
+      "type": "shell",
+      "command": "./script/build.sh --target a.out"
+    }
+  ]
+}

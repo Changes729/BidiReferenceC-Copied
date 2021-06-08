@@ -1,0 +1,130 @@
+# clang-format 13 ClangFormatStyleOptions:
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+# The style used for all options not specifically set in the configuration.
+# the property value should be one of the
+# LLVM, Google, Chromium, Mozilla, WebKit, Microsoft, GNU
+BasedOnStyle: Google
+
+# The extra indent or outdent of access modifiers, e.g. public:.
+AccessModifierOffset: -2
+
+# If true, horizontally aligns arguments after an open bracket.
+# This applies to round brackets (parentheses), angle brackets and square brackets.
+AlignAfterOpenBracket: Align
+
+# xxx: AcrossComments
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignConsecutiveBitFields: true
+AlignConsecutiveMacros: true
+AlignEscapedNewlines: Right
+AlignTrailingComments: true
+
+BreakBeforeBinaryOperators: None
+AlignOperands: Align
+
+BinPackArguments: false
+BinPackParameters: false
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: MultiLine
+  AfterEnum: false
+  AfterFunction: true
+  AfterNamespace: false
+  AfterStruct: true
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: true
+
+# BreakBeforeConceptDeclarations: true
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: false
+
+# The column limit.
+# ColumnLimit: 0
+
+CompactNamespaces: false
+
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+# ConstructorInitializerIndentWidth: 2
+# ContinuationIndentWidth: 2
+# Cpp11BracedListStyle: true
+
+# EmptyLineBeforeAccessModifier: LogicalBlock
+FixNamespaceComments: true
+
+IncludeBlocks: Regroup
+
+# IndentAccessModifiers: true
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentExternBlock: NoIndent
+IndentGotoLabels: false
+IndentPPDirectives: BeforeHash
+# IndentRequires: false
+# IndentWidth: 2
+IndentWrappedFunctionNames: false
+
+# Language, this format style is targeted at.
+Language: Cpp
+
+MaxEmptyLinesToKeep: 1
+
+NamespaceIndentation: None
+
+# If true, clang-format will attempt to re-flow comments.
+ReflowComments: false
+
+PenaltyBreakAssignment: 10
+PenaltyBreakBeforeFirstCallParameter: 1000
+PenaltyBreakComment: 10
+PenaltyBreakFirstLessLess: 0
+PenaltyBreakString: 10
+PenaltyExcessCharacter: 10
+PenaltyReturnTypeOnItsOwnLine: 1000
+
+PointerAlignment: Right
+
+MacroBlockBegin: Without
+
+# SortIncludes: CaseSensitive
+SortIncludes: true
+SortUsingDeclarations: false
+
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+# SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+# SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: false
+SpaceBeforeParens: Never
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+# SpacesInLineCommentPrefix: -1
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+UseTab: Never
